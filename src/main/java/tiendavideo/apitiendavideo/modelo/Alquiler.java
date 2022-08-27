@@ -37,6 +37,15 @@ public class Alquiler {
         return id;
     }
 
+    public Alquiler(Long id, Date fechaPrestamo, int plazo, double precio, Inventario inventario, Tercero tercero) {
+        this.id = id;
+        this.fechaPrestamo = fechaPrestamo;
+        this.plazo = plazo;
+        this.precio = precio;
+        this.inventario = inventario;
+        this.tercero = tercero;
+    }
+
     public void setId(Long id) {
         this.id = id;
     }
