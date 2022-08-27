@@ -3,6 +3,7 @@ package tiendavideo.apitiendavideo.modelo;
 import javax.persistence.*;
 
 @Entity
+@Table(name = "pais")
 public class Pais {
     @Id
     private long id;
