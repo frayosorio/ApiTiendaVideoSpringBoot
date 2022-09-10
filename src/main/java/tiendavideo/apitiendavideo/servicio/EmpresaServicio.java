@@ -5,7 +5,6 @@ import java.util.List;
 import tiendavideo.apitiendavideo.modelo.*;
 
 
-
 public interface EmpresaServicio {
 
 	public List<Empresa> listar();
