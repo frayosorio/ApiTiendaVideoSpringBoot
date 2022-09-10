@@ -33,8 +33,15 @@ public class PaisControlador {
 
     @RequestMapping(value = "/modificar", method = RequestMethod.PUT)
     public Pais actualizar(@RequestBody Pais pais) {
-        return repositorio.save(pais);
+        if (pais.getId() > 0) {
+            return repositorio.save(pais);
+        } else
+            return null;
     }
 
+    @RequestMapping(value = "/eliminar/{id}", method = RequestMethod.DELETE)
+    public void eliminar(@PathVariable long id) {
+        repositorio.deleteById(id);
+    }
 
 }

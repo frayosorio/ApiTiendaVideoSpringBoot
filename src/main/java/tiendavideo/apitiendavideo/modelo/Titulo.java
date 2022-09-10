@@ -2,11 +2,14 @@ package tiendavideo.apitiendavideo.modelo;
 
 import javax.persistence.*;
 
+import org.hibernate.annotations.GenericGenerator;
+
 @Entity
 @Table(name = "titulo")
 public class Titulo {
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @GeneratedValue(strategy = GenerationType.AUTO, generator = "secuencia_titulo")
+    @GenericGenerator(name = "secuencia_titulo", strategy="increment")
     @Column(name = "id")
     private long id;
 
@@ -55,7 +58,7 @@ public class Titulo {
         return empresa;
     }
 
-    public void setIdempresa(Empresa empresa) {
+    public void setEmpresa(Empresa empresa) {
         this.empresa = empresa;
     }
 
