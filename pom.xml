@@ -34,6 +34,7 @@
 			<optional>true</optional>
 		</dependency>
 
+	<!-- repositorio (base de datos) -->
 		<dependency>
 			<groupId>org.postgresql</groupId>
 			<artifactId>postgresql</artifactId>
@@ -44,7 +45,7 @@
 			<artifactId>spring-boot-starter-data-jpa</artifactId>
 		</dependency>
 
-		<!-- junit 5, unit test -->
+	<!-- junit 5, unit test -->
 	<!-- https://mvnrepository.com/artifact/org.junit.jupiter/junit-jupiter-api -->
 		<dependency>
 			<groupId>org.junit.jupiter</groupId>
@@ -70,6 +71,17 @@
 			<artifactId>junit-platform-launcher</artifactId>
 			<version>1.5.0</version>
 			<scope>test</scope>
+		</dependency>
+
+		<!-- seguridad -->
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-security</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>io.jsonwebtoken</groupId>
+			<artifactId>jjwt</artifactId>
+			<version>0.9.1</version>
 		</dependency>
 	</dependencies>
 
